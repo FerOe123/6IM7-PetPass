@@ -1,0 +1,10 @@
+.navbar-custom {
+    background-color: #007BFF; /* Color azul */
+  }
+  .navbar-custom .nav-link,
+  .navbar-custom .navbar-brand {
+        color: #ffffff !important;
+    }
+.container-all {
+    height: 51vh;
+}	

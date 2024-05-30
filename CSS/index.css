@@ -1,0 +1,20 @@
+.custom-height {
+    height: 570px;
+  }
+  .custom-height .carousel-item img {
+    height: 570px;
+  }
+  .custom-height2 {
+    height: 300px;
+  }
+  .custom-height2 .carousel-item img {
+    height: 300px;
+    
+  }
+  .navbar-custom {
+    background-color: #007BFF; /* Color azul */
+}
+  .navbar-custom .nav-link,
+  .navbar-custom .navbar-brand {
+        color: #ffffff !important;
+    }

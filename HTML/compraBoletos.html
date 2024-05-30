@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Boletos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="../CSS/compraBoletos.css"
+    />
+</head>
+<body>
+    <!-- Navbar reutilizada -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="">
+            <img src="Resources/icon_ticket.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <form class="d-flex ms-auto me-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar eventos"
+                   aria-label="Buscar" style="width: 700px;">
+                  <button class="btn btn-outline-light" type="submit">Buscar</button>
+              </form>
+  
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link active" href="#">
+                      <img src="Resources/icon_ayuda.png" alt="Logo" width="25" height="25">
+                      Ayuda
+                  </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Iniciar Sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Contenido de compra de boletos -->
+    <div class="container mt-5">
+        <h2>Mapa de Asientos - Selecciona tu Lugar</h2>
+        <svg width="800" height="400">
+            <!-- Escenario -->
+            <rect class="stage" x="100" y="50" width="600" height="50" />
+            <text x="400" y="80">Escenario</text>
+
+            <!-- Asientos individuales -->
+            <!-- Primera fila -->
+            <circle class="seat" cx="150" cy="150" r="15" data-seat-id="A1" data-seat-price="100"></circle>
+            <circle class="seat" cx="200" cy="150" r="15" data-seat-id="A2" data-seat-price="100"></circle>
+            <circle class="seat" cx="250" cy="150" r="15" data-seat-id="A3" data-seat-price="100"></circle>
+            <circle class="seat" cx="300" cy="150" r="15" data-seat-id="A4" data-seat-price="100"></circle>
+            <circle class="seat" cx="350" cy="150" r="15" data-seat-id="A5" data-seat-price="100"></circle>
+            <circle class="seat" cx="400" cy="150" r="15" data-seat-id="A6" data-seat-price="100"></circle>
+
+            <!-- Segunda fila -->
+            <circle class="seat" cx="150" cy="200" r="15" data-seat-id="B1" data-seat-price="80"></circle>
+            <circle class="seat" cx="200" cy="200" r="15" data-seat-id="B2" data-seat-price="80"></circle>
+            <circle class="seat" cx="250" cy="200" r="15" data-seat-id="B3" data-seat-price="80"></circle>
+            <circle class="seat seat-booked" cx="300" cy="200" r="15" data-seat-id="B4" data-seat-price="80" title="Reservado"></circle>
+            <circle class="seat" cx="350" cy="200" r="15" data-seat-id="B5" data-seat-price="80"></circle>
+            <circle class="seat" cx="400" cy="200" r="15" data-seat-id="B6" data-seat-price="80"></circle>
+
+            <!-- Tercera fila -->
+            <circle class="seat" cx="150" cy="250" r="15" data-seat-id="C1" data-seat-price="60"></circle>
+            <circle class="seat" cx="200" cy="250" r="15" data-seat-id="C2" data-seat-price="60"></circle>
+            <circle class="seat" cx="250" cy="250" r="15" data-seat-id="C3" data-seat-price="60"></circle>
+            <circle class="seat" cx="300" cy="250" r="15" data-seat-id="C4" data-seat-price="60"></circle>
+            <circle class="seat" cx="350" cy="250" r="15" data-seat-id="C5" data-seat-price="60"></circle>
+            <circle class="seat" cx="400" cy="250" r="15" data-seat-id="C6" data-seat-price="60"></circle>
+        </svg>
+
+        <!-- Información del asiento seleccionado -->
+        <div class="mt-4">
+            <h4>Asiento Seleccionado:</h4>
+            <p id="seatInfo">Ninguno</p>
+        </div>
+    </div>
+        
+        <!-- Sección en caso de que no haya boletos -->
+        <div class="mt-4 mx-5">
+            <h3>Comprar boletos</h3>
+            <p>Da click para proceder con la compra</p>
+            <a href="#" class="btn btn-primary">Pagar</a>
+        </div>
+    </div>
+    <!-- Footer -->
+<footer class="bg-dark text-white mt-5">
+    <div class="container p-4">
+        <div class="row">
+            <!-- Sección 1: Enlaces -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase">Estamos para ayudarte</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="text-white">Inicio</a></li>
+                    <li><a href="#" class="text-white">Contacto</a></li>
+                    <li><a href="#" class="text-white">Preguntas Frecuentes</a></li>
+                    <li><a href="#" class="text-white">Ayuda</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección 2: Contacto -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase">Nosotros</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><p class="text-white">Email: info@TicketPlus.com</p></li>
+                    <li><p class="text-white">Teléfono: +52 55 4560 0389</p></li>
+                    <li><p class="text-white">Dirección: CECyT 9-IPN, Mar Mediterráneo #227, CDMX</p></li>
+                </ul>
+            </div>
+
+            <!-- Sección 3: Redes Sociales -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <h5 class="text-uppercase">Síguenos</h5>
+                <ul class="list-unstyled mb-0 d-flex">
+                    <li><a href="#" class="text-white me-4"><img src="Resources/icon_fb.png" alt="Facebook" width="24">Facebook</a></li>
+                    <li><a href="#" class="text-white me-4"><img src="Resources/icon_twitter.png" alt="Twitter" width="24">Twitter</a></li>
+                    <li><a href="#" class="text-white me-4"><img src="Resources/icon_ig.png" alt="Instagram" width="24">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3 bg-secondary">
+        <p class="mb-0">© 2024 TicketPlus. Todos los derechos reservados.</p>
+    </div>
+</footer>
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/compraBoletos.js"></script>
+</body>
+</html>

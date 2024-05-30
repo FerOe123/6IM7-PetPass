@@ -1,0 +1,32 @@
+.navbar-custom {
+  background-color: #007BFF; /* Color azul */
+}
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+      color: #ffffff !important;
+  }
+.seat {
+    cursor: pointer;
+    fill: green;
+    stroke: black;
+    stroke-width: 2;
+}
+.seat:hover {
+    fill: lightgreen;
+}
+.seat-booked {
+    fill: red;
+    cursor: not-allowed;
+}
+.stage {
+    fill: grey;
+    stroke: black;
+    stroke-width: 2;
+}
+/* Texto del escenario */
+text {
+    fill: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-anchor: middle;
+}
